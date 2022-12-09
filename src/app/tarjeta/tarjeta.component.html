@@ -1,0 +1,27 @@
+<div class="timeline">
+<div class="timeline-card timeline-card-primary card shadow-sm">
+    <div class="card-body">
+      <div class="h5 mb-1">{{datos.nombre}}
+
+        <span *ngIf="datos.enlace==undefined||datos.enlace.length==0;else conEnlace" class="text-muted h6"> {{datos.lugar}}</span>
+        
+        
+        <ng-template #conEnlace>
+          <a href={{datos.enlace}} class="text-muted h6">{{datos.lugar}}</a>
+        </ng-template>
+
+        
+      </div>
+      <div class="text-muted text-small mb-2">
+        {{datos.fechas}}
+      </div>
+      <div *ngIf="datos.urlVideo!=undefined&&datos.urlVideo!=''" class="text-small mb-2">
+        <ngbd-modal-basic [enlaceVideo]="datos.urlVideo">"</ngbd-modal-basic>
+      </div>
+      <div>
+        {{datos.texto}}
+      </div>
+    </div>
+  </div>
+  </div>
+  
