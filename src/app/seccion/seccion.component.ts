@@ -11,9 +11,12 @@ import {Tarjeta} from '../models/Tarjeta';
 export class SeccionComponent implements OnInit {
   @Input()
   datos!: Seccion;
+
+  tarjetas!:any;
   constructor() { }
 
   ngOnInit(): void {
+    this.tarjetas=Object.values(this.datos.tarjetas);    
   }
 
 }

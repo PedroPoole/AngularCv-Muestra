@@ -33,4 +33,6 @@ export class DatospersonalesComponent implements OnInit {
     return edad;
   }
 
+  
+
 }

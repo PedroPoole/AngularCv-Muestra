@@ -62,12 +62,7 @@ export class SupabaseService {
     
   }
 
-  dameClanes(){
-    return this.supabase
-    .from('clan')
-    .select('*')
-  }
-
+ 
 
   /** Función relativamente compleja. El objetivo final es crear un objeto asociativo de tres niveles de profundidad 
    * (usuario con sus secciones, cada sección con sus tarjetas)
